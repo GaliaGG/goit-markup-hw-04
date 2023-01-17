@@ -357,15 +357,19 @@ body {
   border: 1px solid var(--additional-light-grey);
   border-radius: 4px;
   cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
+.customers-link {
+  display: block;
+  padding: 16px 32px;
+
+}
+
 .customers-icon {
   width: 104px;
   height: 56px;
   fill: var(--additional-light-grey);
+  display: block;
 }
 
 .customers-item:hover .customers-icon {
@@ -375,7 +379,12 @@ body {
 .customers-item:hover {
   border-color: var(--button-acent);
 }
-  
+
+.customers-link:focus .customers-icon {
+  fill: var(--button-acent);
+}
+
+
 /* Footer */
 .footer-section {
   background-color: var(--title-color);
@@ -473,7 +482,9 @@ border-radius: 4px;
 }
 
 .card-item {
-  width: calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+  background-color: var(--white);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .card-text {
@@ -481,15 +492,18 @@ border-radius: 4px;
   padding-bottom: 32px;
   padding-left: 16px;
 
-  background-color: var(--white);
   border: 1px solid var(--additional-color);
   border-top: none;
-  box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08);
+  
 }
 
-.card-item:hover .card-text,
+.card-item:hover .card-text {
+  border: none;
+}
+
+.card-item:hover,
 .filter-item:hover {
-  border: 0.5px solid #F4F4FD;
+  border: 0.5px solid var(--additional-secondary-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
